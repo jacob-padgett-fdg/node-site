@@ -3,24 +3,26 @@ import './App.css'
 import Api from './Api.js'
 
 
-class App extends Component {
+class Content extends Component {
 state = {
     data: null
   }
 
   componentDidMount() {
-    Api.callBackendAPI('/read/home')
+    const page = this.props.source
+    Api.callBackendAPI('/read/' + page)
       .then(res => this.setState({ data: res.data.content}))
       .catch(err => console.log(err))
   }
 
   render() {
+    const page = this.props.source
     return (
-      <div className="Home">
+      <div className={page}>
         <div dangerouslySetInnerHTML={{__html: this.state.data}} />
       </div>
     )
   }
 }
 
-export default App
+export default Content

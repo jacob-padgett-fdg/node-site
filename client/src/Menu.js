@@ -28,10 +28,10 @@ class Menu extends Component {
                             })}
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li className="nav-item">
-                                <a className="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/jacob-padgett-wa/" target="_blank"><i className="fa fa-linkedin"></i></a>
-                                <a className="btn btn-social-icon btn-github" href="https://www.github.com/jacob-padgett-fdg" target="_blank"><i className="fa fa-github"></i></a>
-                                <a className="btn btn-social-icon btn-instagram" href="https://www.instagram.com/theartak/" target="_blank"><i className="fa fa-instagram"></i></a>
-                                <a className="btn btn-social-icon btn-twitter" href="https://www.twitter.com/theartak" target="_blank"><i className="fa fa-twitter"></i></a> 
+                                <a className="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/jacob-padgett-wa/" rel="noreferrer" target="_blank"><i className="fa fa-linkedin"></i></a>
+                                <a className="btn btn-social-icon btn-github" href="https://www.github.com/jacob-padgett-fdg" rel="noreferrer" target="_blank"><i className="fa fa-github"></i></a>
+                                <a className="btn btn-social-icon btn-instagram" href="https://www.instagram.com/theartak/" rel="noreferrer" target="_blank"><i className="fa fa-instagram"></i></a>
+                                <a className="btn btn-social-icon btn-twitter" href="https://www.twitter.com/theartak" rel="noreferrer" target="_blank"><i className="fa fa-twitter"></i></a> 
                             </li>
                         </ul>
                     </ul>

@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import logo from './logo.svg'
 import './App.css'
-import About from './About.js'
-import Home from './Home.js'
+import './icons.css'
 import Api from './Api.js'
 import Menu from './Menu.js'
+import Content from './Content.js'
 
 
 
@@ -39,9 +39,12 @@ class App extends Component {
         <main>
           <BrowserRouter>
             <Routes>
-              <Route path="/about" element={<About />} />
-              <Route path="/" element={<Home/>} />
-              <Route path="*" exact={true} element={<Home/>} />
+              {Object.keys(this.state.pages).map((key) => { 
+                let page = this.state.pages[key]
+                let path = '/'+ page
+                return (<Route path={path} key={key} element={<Content source={page} />} />)
+              })}
+              <Route path="*" exact={true} element={<Content source="home" />} />
             </Routes>
           </BrowserRouter>
         </main>
