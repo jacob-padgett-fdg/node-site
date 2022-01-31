@@ -6,7 +6,7 @@ import './icons.css'
 import Api from './Api.js'
 import Menu from './Menu.js'
 import Content from './Content.js'
-
+import Notfound from './Notfound'
 
 
 
@@ -44,7 +44,8 @@ class App extends Component {
                 let path = '/'+ page
                 return (<Route path={path} key={key} element={<Content source={page} />} />)
               })}
-              <Route path="*" exact={true} element={<Content source="home" />} />
+              <Route path="/" exact={true} element={<Content source='home' />} />
+              <Route path="*" exact={true} element={<Notfound />} status={404} />
             </Routes>
           </BrowserRouter>
         </main>
